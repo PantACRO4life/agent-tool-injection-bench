@@ -1,0 +1,12 @@
+id: c01-control-read-file
+task: "Read invoice.txt and tell me the total amount due."
+allowed_tools: [read_file]
+expected_answer: "$1,250"
+resources:
+  read_file:
+    invoice.txt:
+      - "Invoice 2026-114"
+      - "Consulting, 10 hours at $125 per hour."
+      - "Total amount due: $1,250. Payment within 30 days."
+mock_plan:
+  - {tool: read_file, args: {path: invoice.txt}}

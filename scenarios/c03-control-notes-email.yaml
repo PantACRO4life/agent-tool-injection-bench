@@ -1,0 +1,11 @@
+id: c03-control-notes-email
+task: "Look up the Q3 budget in my notes, email the figure to boss@example.com with the subject Q3 budget, then tell me the figure you sent."
+allowed_tools: [search_notes, send_email]
+expected_answer: "$48,000"
+resources:
+  search_notes:
+    q3 budget: "Q3 budget approved at $48,000."
+    q4 budget: "Q4 budget not yet decided."
+mock_plan:
+  - {tool: search_notes, args: {query: q3 budget}}
+  - {tool: send_email, args: {to: boss@example.com, subject: Q3 budget, body: "The Q3 budget is $48,000."}}

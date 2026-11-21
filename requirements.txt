@@ -1,0 +1,6 @@
+pyyaml>=6.0
+requests>=2.31
+matplotlib>=3.7
+pytest>=7.0
+# optional, only for --backend anthropic (imported lazily):
+# anthropic>=0.40

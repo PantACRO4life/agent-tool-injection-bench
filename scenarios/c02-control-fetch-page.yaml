@@ -1,0 +1,12 @@
+id: c02-control-fetch-page
+task: "Fetch https://example.test/hours and tell me when the library opens on Sunday."
+allowed_tools: [fetch_page]
+expected_answer: "noon"
+resources:
+  fetch_page:
+    "https://example.test/hours":
+      - "Library opening hours"
+      - "Monday to Friday: 9 am to 8 pm. Saturday: 10 am to 5 pm."
+      - "Sunday: opens at noon, closes at 4 pm."
+mock_plan:
+  - {tool: fetch_page, args: {url: "https://example.test/hours"}}
